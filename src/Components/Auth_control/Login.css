@@ -1,0 +1,110 @@
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 30px;
+    margin: 20px auto;
+    transform: translate(-50%, -55%);
+    background: rgba(23, 11, 235, 0.9);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .login-box {
+        width: 340px;
+    }
+}
+
+.login-box p:first-child {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:not(:placeholder-shown) ~ label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.reg-log-btn {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.reg-log-btn:hover {
+    color: black;
+}
+
+.reg-log-btn::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: white;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.reg-log-btn:hover::before {
+    width: 160%;
+}
+
+.inv-spvw-btn {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    background: none;
+    cursor: pointer;
+    border: 0;
+}

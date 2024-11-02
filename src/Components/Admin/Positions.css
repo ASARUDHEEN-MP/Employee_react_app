@@ -1,0 +1,102 @@
+.positions {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.add-position-form,
+.edit-position-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.position-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+.add-button,
+.save-button,
+.edit-button,
+.delete-button {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-button {
+    background-color: #4CAF50; /* Green */
+}
+
+.add-button:hover {
+    background-color: #45a049; /* Darker shade */
+}
+
+.save-button {
+    background-color: #008CBA; /* Blue */
+}
+
+.save-button:hover {
+    background-color: #007B9E; /* Darker shade */
+}
+
+.edit-button {
+    background-color: #ffa500; /* Orange */
+}
+
+.edit-button:hover {
+    background-color: #ff8c00; /* Darker shade */
+}
+
+.delete-button {
+    background-color: #ff6384; /* Red */
+}
+
+.delete-button:hover {
+    background-color: #ff4c4c; /* Darker shade */
+}
+
+.positions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.positions-table th,
+.positions-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.positions-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.positions-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.cancel-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f44336; /* Red */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f; /* Darker shade */
+}

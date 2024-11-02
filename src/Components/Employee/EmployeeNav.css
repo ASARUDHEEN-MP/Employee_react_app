@@ -1,0 +1,57 @@
+.sidebar {
+    width: 200px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height to cover the page */
+    background: #333; /* Darker background for better contrast */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Padding around the content */
+    position: fixed; /* Fixed position on the left side */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.logo {
+    font-size: 1.8rem; /* Slightly larger font size for emphasis */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 20px; /* Space below the logo */
+    text-align: center; /* Center the logo */
+}
+
+.navList {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.navItem {
+    cursor: pointer;
+    padding: 10px 15px; /* Padding for touch targets */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, color 0.3s; /* Transition effects */
+    margin: 5px 0; /* Space between items */
+    font-size: 1.1rem; /* Increase font size for better readability */
+}
+
+.navItem:hover {
+    background: #555; /* Slightly lighter background on hover */
+    color: #fff; /* Keep text white on hover */
+}
+
+.navItem.active {
+    background: #70cf58; /* Active item background */
+    color: #fff; /* Active item text color */
+}
+.navItem {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add some padding */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.navItem i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+

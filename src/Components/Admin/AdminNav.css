@@ -1,0 +1,56 @@
+.sidebar {
+    width: 200px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height to cover the page */
+    background: #444; /* Dark background for the sidebar */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Padding around the content */
+    position: fixed; /* Fixed position on the left side */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.logo {
+    font-size: 1.5rem; /* Larger font size for the title */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 20px; /* Space below the logo */
+    text-align: center; /* Center the logo */
+}
+
+.navList {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.navItem {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    cursor: pointer;
+    padding: 10px 15px; /* Padding for touch targets */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, color 0.3s; /* Transition effects */
+    margin: 5px 0; /* Space between items */
+}
+
+.navItem:hover {
+    background: #555; /* Slightly lighter background on hover */
+    color: #ddd; /* Text color change on hover */
+}
+
+.navIcon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem; /* Slightly larger icons */
+    transition: transform 0.2s; /* Icon scaling on hover */
+}
+
+.navItem:hover .navIcon {
+    transform: scale(1.1); /* Scale up icon on hover */
+}
+.navItem.active {
+    background: #555; /* Darker background for active item */
+    color: #ddd; /* Lighter text color for active item */
+}
+

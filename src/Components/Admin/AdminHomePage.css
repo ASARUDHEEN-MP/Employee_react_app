@@ -1,0 +1,14 @@
+.admin-container {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 20px; /* Padding around the content */
+    width: calc(100% - 250px); /* Full width minus sidebar */
+    background-color: #f8f8f8; /* Background color for main content */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  

@@ -1,50 +1,99 @@
+/* Signup.css */
+.signup-container {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://www.enchanted.media/wp-content/uploads/2023/11/POWERPOINT-AdobeStock_351690896.jpg'); /* Adjust the path */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+}
+
+
 .login-box {
+   /* Adjust the path */
     position: absolute;
     top: 50%;
     left: 50%;
     width: 400px;
     padding: 30px;
     margin: 20px auto;
-    transform: translate(-50%, -55%);
-    background: rgba(38, 61, 238, 0.9);
+    transform: translate(-50%, -50%);
+    background: rgba(63, 81, 181, 0.9); /* Deep blue */
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(100, 66, 250, 0.6);
-    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 15px; /* More rounded corners */
+    
 }
 
 @media (max-width: 768px) {
     .login-box {
-        width: 340px;
+        width: 90%; /* Responsive width */
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left-side, .right-side {
+    width: 30%; /* Adjust width as necessary */
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* To hide any overflowing elements */
+}
+
+.left-side {
+    background: rgba(255, 255, 255, 0.2);
+    animation: fadeInLeft 0.5s ease-in-out; /* Animation for left side */
+}
+
+.right-side {
+    background: rgba(255, 255, 255, 0.2);
+    animation: fadeInRight 0.5s ease-in-out; /* Animation for right side */
+}
+
 .login-box p:first-child {
-    margin: 0 0 30px;
-    padding: 0;
+    margin: 0 0 20px;
     color: #fff;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Larger font size */
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle shadow */
 }
 
-.login-box .user-box {
+.user-box {
     position: relative;
+    margin-bottom: 30px; /* Spacing between fields */
 }
 
-.login-box .user-box input {
+.user-box input {
     width: 100%;
     padding: 10px 0;
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
     outline: none;
     background: transparent;
+    transition: border-color 0.4s, transform 0.2s; /* Smoother transitions */
 }
 
-.login-box .user-box label {
+.user-box input:focus {
+    border-color: #ff4081; /* Pink focus effect */
+    transform: scale(1.02); /* Slight scale effect */
+}
+
+.user-box label {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,14 +101,14 @@
     font-size: 16px;
     color: #fff;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label {
+.user-box input:focus~label,
+.user-box input:valid~label {
     top: -20px;
     left: 0;
-    color: #fff;
+    color: #ff4081; /* Label color changes on focus */
     font-size: 12px;
 }
 
@@ -67,18 +116,19 @@
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid #ff4081; /* Pink border */
     padding: 10px 20px;
-    font-size: 17px;
+    font-size: 18px; /* Increased font size */
     font-weight: bold;
-    background: transparent;
+    background: rgba(255, 64, 129, 0.8); /* Pink background */
     position: relative;
-    transition: all 1s;
+    transition: all 0.3s; /* Quicker hover effect */
     overflow: hidden;
 }
 
 .reg-log-btn:hover {
-    color: black;
+    color: #fff;
+    background: rgba(255, 64, 129, 1); /* Solid pink on hover */
 }
 
 .reg-log-btn::before {
@@ -89,52 +139,83 @@
     top: 0;
     left: -40px;
     transform: skewX(45deg);
-    
     z-index: -1;
-    transition: all 1s;
+    transition: all 0.4s;
 }
 
 .reg-log-btn:hover::before {
-    width: 160%;
+    width: 200%; /* More pronounced background effect */
 }
 
 .inv-spvw-btn {
     position: absolute;
     right: 10px;
-    top: 35%;
+    top: 15%;
     transform: translateY(-50%);
     background: none;
     cursor: pointer;
     border: 0;
 }
+
 .error-message {
-    color: red;
+    color: #ff5252; /* Red error message */
     margin-top: 10px;
+    font-weight: bold;
 }
+
 .login-button {
     background: none;
     border: none;
-    color: #007bff;
+    color: #fff;
     cursor: pointer;
     text-decoration: underline;
 }
 
 .login-button:hover {
     text-decoration: none;
+    color: #ff4081; /* Change color on hover */
 }
 
-.login-button {
-    background: none;
-    border: none;
-    color: #f0f3f6;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-.login-button:hover {
-    text-decoration: none;
-}
-.loginbutton{
+.loginbutton {
     color: #fff;
     margin-top: 10px;
 }
+
+.validation-indicators {
+    display: flex;
+    flex-direction: column; /* Stack indicators vertically */
+    margin-top: 10px; /* Spacing above the indicators */
+}
+
+.indicator-group {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 5px; /* Space between each row of indicators */
+}
+
+.indicator {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px; /* Circle width */
+    height: 20px; /* Circle height */
+    border-radius: 50%; /* Make it a circle */
+    font-size: 16px; /* Adjust icon size */
+    margin-right: 10px; /* Spacing between circle and text */
+}
+
+.valid {
+    background-color: #4caf50; /* Green background for valid */
+    color: white; /* White icon color */
+}
+
+.invalid {
+    background-color: #f44336; /* Red background for invalid */
+    color: white; /* White icon color */
+}
+
+.indicator-text {
+    color: #e9dede; /* Light text color for readability */
+    font-size: 14px; /* Text size */
+}
+

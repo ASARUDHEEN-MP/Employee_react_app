@@ -10,16 +10,29 @@ import { useNavigate, NavLink,Outlet ,Link} from 'react-router-dom';
 
 function UserDashboard() {
   const [activeTab, setActiveTab] = useState('employees');
-  const { token, addToken,logout} = useMyContext();
+  const { token, addToken,role,logout} = useMyContext();
   const navigate = useNavigate();
   
   useEffect(() => {
-    console.log(token)
+    
+   
     // Check if email state is present, if not, navigate back to signup page
     if (!token) {
       navigate('/login');
     }
   }, [token, navigate]);
+
+  useEffect(() => {
+    if (role) {
+        // You can perform actions based on the role here
+        if (role === 'admin') {
+            // Logic for admin
+            console.log("i am the admin")
+        } else if (role === 'employee') {
+            // Logic for employee
+        }
+    }
+}, [role]);
 
   const handleLogout = () => {
     // Logic for logging out the user

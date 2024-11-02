@@ -1,0 +1,114 @@
+.custom-fields {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .add-field-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .field-input,
+  .field-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Make input and select take equal space */
+  }
+  
+  .add-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+  }
+  
+  .custom-fields-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-fields-table th,
+  .custom-fields-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .custom-fields-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .custom-fields-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .delete-button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff6384;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #ff4c4c; /* Darker shade on hover */
+  }
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .small-search-input {
+    width: 200px; /* Smaller width for a compact look */
+    padding: 5px; /* Less padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .page-button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .page-button.active {
+    background-color: #45a049; /* Darker green for active page */
+  }
+  
+  .page-button:hover:not(.active) {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .page-button:disabled {
+    background-color: #ccc; /* Grey for disabled button */
+    cursor: not-allowed;
+  }
+  
